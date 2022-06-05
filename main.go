@@ -40,7 +40,7 @@ func main() {
 		fmt.Scan(&userTickets)
 
 		// Check if the user wants to purchase more tickets than the amount available
-		if userTickets <= remainingTickets {
+		if userTickets < remainingTickets {
 			remainingTickets = remainingTickets - userTickets
 			bookings = append(bookings, firstName+" "+lastName)
 
@@ -60,6 +60,8 @@ func main() {
 				fmt.Println("Our conference is booked out. Come back next year.")
 				break
 			}
+		} else if userTickets == remainingTickets {
+			// do something else
 		} else {
 			fmt.Printf("We only have %v tickets remaining, so you can't book %v tickets\n", remainingTickets, userTickets)
 		}
