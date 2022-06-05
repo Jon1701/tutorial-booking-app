@@ -11,6 +11,8 @@ func main() {
 	var remainingTickets uint = 50
 	var bookings []string
 
+	greetUsers()
+
 	fmt.Printf("conferenceTickets is %T, remainingTickets is %T, conferenceName is %T\n", conferenceTickets, remainingTickets, conferenceName)
 
 	fmt.Printf("Welcome to %v booking application\n", conferenceName)
@@ -77,22 +79,8 @@ func main() {
 			}
 		}
 	}
+}
 
-	city := "London"
-	switch city {
-	case "New York":
-		// execute code for booking New York conference tickets
-
-	case "Singapore", "Hong Kong":
-		// execute code for booking Singapore or Hong Kong conference tickets
-
-	case "London", "Berlin":
-		// execute code for booking London or Berlin conference tickets
-
-	case "Mexico City":
-		// execute code for booking Mexico City conference tickets
-
-	default:
-		fmt.Println("No valid city selected")
-	}
+func greetUsers() {
+	fmt.Println("Welcome to our conference")
 }
